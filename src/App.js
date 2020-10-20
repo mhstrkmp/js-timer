@@ -11,6 +11,10 @@ export function createTimer() {
         className: "seconds",
         innerText: initialTime,
       }),
+      createElement("button", {
+        className: "timer--button",
+        innerText: "Click Me!!!",
+      }),
     ],
   });
   return timer;
