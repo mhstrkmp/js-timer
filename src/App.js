@@ -1,5 +1,6 @@
 import "./app.css";
 import { createElement } from "./utils/element";
+import { Countdown } from "./Countdown";
 
 // Variable Declaration
 let initialTime = 60;
@@ -7,6 +8,7 @@ let initialTime = 60;
 // Function Declaration
 
 export function createTimer() {
+  const countdown = Countdown();
   const timer = createElement("div", {
     className: "timer",
     children: [
@@ -20,5 +22,6 @@ export function createTimer() {
       }),
     ],
   });
+  timer.append(countdown);
   return timer;
 }
