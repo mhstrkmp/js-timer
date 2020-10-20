@@ -1,4 +1,4 @@
-import { App } from "./App";
+import { createTimer } from "./App";
 
-const app = App();
+const app = createTimer();
 document.body.append(app);

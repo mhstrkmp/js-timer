@@ -1,8 +1,24 @@
 import "./app.css";
+import { createElement } from "./utils/element";
 
-export function App() {
-  const app = document.createElement("div");
-  app.className = "app";
-  app.innerHTML = "<b>Awesome</b> Webpack Template!";
-  return app;
+// Variable Declaration
+let initialTime = 60;
+
+// Function Declaration
+
+export function createTimer() {
+  const timer = createElement("div", {
+    className: "timer",
+    children: [
+      createElement("div", {
+        className: "seconds",
+        innerText: initialTime,
+      }),
+      createElement("button", {
+        className: "timer--button",
+        innerText: "Click Me!!!",
+      }),
+    ],
+  });
+  return timer;
 }
